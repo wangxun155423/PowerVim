@@ -191,19 +191,23 @@ endif
 
 
 "花括号自动格式化，首行一个tab
-autocmd FileType cpp,java inoremap { {<CR>}<ESC>kA<CR>
+"autocmd FileType cpp,java inoremap { {<CR>}<ESC>kA<CR>
 
 set fenc=" "
 "显示匹配
 set showmatch
 "括号匹配
-inoremap ( ()<ESC>i
-inoremap [ []<ESC>i
-inoremap ' ''<ESC>i
-inoremap " ""<ESC>i
-set selectmode=mouse,key
-set selection=exclusive
-set mouse=n "可视模式下使用鼠标，set mouse=a这个命令导致在vim下复制粘贴不好用
+"inoremap ( ()<ESC>i
+"inoremap [ []<ESC>i
+"inoremap ' ''<ESC>i
+"inoremap " ""<ESC>i
+"set selectmode=mouse,key
+"set selection=exclusive
+"set mouse=n "可视模式下使用鼠标，set mouse=a这个命令导致在vim下复制粘贴不好用
+"
+" 格式化, ggG
+set equalprg=clang-format\ -style=google
+
 set ai "vim中复制粘贴保存格式
 set ignorecase "设置默认大小写不敏感查找
 set smartcase "如果有大小写字母，则切换到大小写敏感查找
